@@ -1,0 +1,261 @@
+*{
+	margin: 0
+}
+
+body {
+	background-color: #faf4e4;
+	font-family: montserrat;
+}
+.grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	grid-template-rows: repeat(5, auto);
+	text-align: center;	
+	align-items: center;
+	grid-template-areas:
+		"header_menu header_menu header_menu header_menu"
+		"banner banner banner banner"
+		"titulo titulo titulo titulo"
+		"th_servicios th_servicios th_servicios th_servicios"
+		"footer footer footer footer";
+}
+.menu {
+	margin-bottom: 1vw;	
+  	grid-template-columns: repeat(4, 1fr);
+	display: grid;
+	grid-gap: 10px;
+    text-align: center; 
+    align-items: center;
+    grid-template-areas: 
+      "header_logo menu_links menu_links menu_links";
+} 
+.header_logo {
+  align-items: center;
+  grid-area: header_logo;
+}
+.header_logo img {
+  width: 300px;
+  height: 80px;
+}
+.logo{
+	cursor: pointer;
+}
+.menu_links {
+  display: flex;
+  list-style-type: none;
+  grid-area: menu_links;
+}
+.menu_links li{
+  cursor: pointer;
+  flex: auto;
+  color: black;
+  text-align: center;
+}
+.menu_links li:hover {
+  border-radius: 5px;
+  border-color: black; 
+  border-style: solid;
+  border-width: 0.6px;
+}
+/* ====> three_lines, es el ícono para el menú responsive <===== */
+.three_lines{ 
+  display: none;
+  cursor: pointer;
+}
+.three_lines div{
+  width: 25px;
+  height: 3px;
+  margin: 4px;
+  background-color: black;
+}
+/* ====> Final three_lines <===== */
+
+.servicios, .nosotros, .sedes, .blog, .iniciar_sesion{
+  text-decoration: none;
+  color: black;
+  font-size: 2vw;
+}
+.header_menu {
+	border-color: black;
+	border-style: solid;
+	grid-area: header_menu;
+}
+.banner {
+	border-color: black;
+	border-style: solid;
+	grid-area: banner;
+	margin-bottom: 10vw;
+}
+.banner img {
+	border-width: 0.5px;
+	width: 100%;
+	height: auto;
+}
+.titulo{
+	margin-bottom: 10vw;
+	grid-area: titulo;
+}
+.titulo h1{
+	font-size: 3vw;
+	background-color: #ffce7a;
+	display: inline-block;
+	padding: 10px;
+	border-radius: 10px;
+}
+.th_servicios{
+	width: 80%;
+	height: auto;
+	display: flex;
+	margin-left: 10%;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	grid-area: th_servicios;
+}
+.box{
+	width: 35vw;
+	height: 25vw;
+	margin-bottom: 15vw;
+}
+.box p{
+	border-radius: 5px;
+	text-decoration: none;
+	margin-top: 3%;
+	font-size: 2vw;
+}
+.box2{
+	width: 35vw;
+	height: auto;
+}
+.box2 img{
+	width: 35vw;
+	height: 25vw;
+	border-radius: 0.5vw;
+	margin-bottom: 0;
+}
+.footer {
+	padding: 50px;	
+	background-color: black;
+	grid-area: footer;
+}
+.footer ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style-type: none;
+}
+.footer ul li{
+	cursor: pointer;
+	flex: auto;
+	text-align: center;
+}
+.escribenos, .preg_frequ, .trabaja_con_nos, .eventos {
+	color: #faf4e4;
+	text-decoration: none;
+	border-radius: 5px;
+	border-color: #faf4e4;
+	border-width: 0.2px;
+	border-style: solid;
+	padding: 10px;
+	font-size: 1vw;
+}
+
+@media screen and (max-width: 768px) {
+
+.grid {
+	width: 100%;
+	display: grid;
+	grid-gap: 2%;
+	grid-template-columns: repeat(4, auto);
+	grid-template-rows: repeat(5, auto);
+	text-align: center;	
+	align-items: center;
+	grid-template-areas:
+		"header_menu header_menu header_menu header_menu"
+		"titulo titulo titulo titulo "
+		"banner banner banner banner"
+		"th_servicios th_servicios th_servicios th_servicios"
+		"footer footer footer footer"; 
+}
+
+.menu {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-gap: 10px;
+  text-align: center; 
+  align-items: center;
+  grid-template-areas: 
+      "header_logo header_logo header_logo three_lines";
+} 
+.three_lines{
+  display: block;
+}
+.menu_links {
+  margin-left: 20%;
+}
+.menu_links {
+  position: absolute;
+  background-color: black;
+  right: 0px;
+  padding: 5px;
+  margin-top: 80px;
+  margin-right: 15vw; 
+  height: 40vw;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.menu_links li{
+  margin-bottom: 5vw;
+}
+.menu_links li:hover {
+  background-color: grey;
+}
+.servicios, .nosotros, .sedes, .blog, .iniciar_sesion{
+  text-decoration: none;
+  color: white;
+  font-size: 3vw;
+}
+
+.box{
+	width: 55vw;
+	height: 35vw;
+	margin-bottom: 15vw;
+}
+.box img{
+	width: 50vw;
+	height: 30vw;
+	margin-bottom: 5%;
+}
+.box p{
+	border-radius: 5px;
+	text-decoration: none;
+	font-size: 3vw;
+}
+.box2{
+	width: 55vw;
+	height: auto;
+}
+
+.footer ul{
+	margin: 0;
+	display: block;
+	list-style-type: none;
+}
+.footer ul li{
+	cursor: pointer;
+	padding: 20px;
+	flex: auto;
+	text-align: center;
+}
+.escribenos, .preg_frequ, .trabaja_con_nos, .eventos {
+	color: #faf4e4;
+	text-decoration: none;
+	border-radius: 5px;
+	border-color: #faf4e4;
+	border-width: 0.2px;
+	border-style: solid;
+	padding: 10px 3vw;
+}
+}
+

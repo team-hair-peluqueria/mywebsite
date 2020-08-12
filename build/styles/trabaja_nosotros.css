@@ -1,0 +1,300 @@
+*{
+	margin: 0
+}
+
+body {
+	background-color: #faf4e4;
+	font-family: montserrat;
+}
+.grid {
+	width: 100%;
+	margin: 20px auto;
+	display: grid;
+	grid-column-gap: 1%;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(6, auto);
+	grid-template-areas:
+		"header_menu header_menu header_menu"
+		"blanc titulo_trabaja_nosotros titulo_trabaja_nosotros"
+		"banner_trabaja_nosotros form_trabaja_nosotros  form_trabaja_nosotros"
+		"banner_trabaja_nosotros form_trabaja_nosotros form_trabaja_nosotros"
+		"blanc_formulario form_trabaja_nosotros form_trabaja_nosotros"
+		"footer footer footer";
+}
+.menu {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-gap: 10px;
+  text-align: center; 
+  align-items: center;
+  grid-template-areas: 
+      "header_logo menu_links menu_links menu_links";
+} 
+.header_logo {
+  align-items: center;
+  grid-area: header_logo;
+}
+.header_logo img {
+  width: 300px;
+  height: 80px;
+}
+.logo{
+	cursor: pointer;
+}
+.menu_links {
+  display: flex;
+  list-style-type: none;
+  grid-area: menu_links;
+}
+.menu_links li{
+  cursor: pointer;
+  flex: auto;
+  color: black;
+  text-align: center;
+}
+.menu_links li:hover {
+  border-radius: 5px;
+  border-color: black; 
+  border-style: solid;
+  border-width: 0.6px;
+}
+/* ====> three_lines, es el ícono para el menú responsive <===== */
+.three_lines{ 
+  display: none;
+  cursor: pointer;
+}
+.three_lines div{
+  width: 25px;
+  height: 3px;
+  margin: 4px;
+  background-color: black;
+}
+.servicios, .nosotros, .sedes, .blog, .iniciar_sesion{
+  text-decoration: none;
+  color: black;
+  font-size: 2vw;
+}
+.header_menu {
+	grid-area: header_menu;
+}
+.blanc{
+	grid-area: blanc;
+}
+.titulo_trabaja_nosotros{
+	margin: 10% 20% 0% 10%;
+	text-align: center;
+	grid-area: titulo_trabaja_nosotros;
+}
+.title_trabaja_nosotros{
+	display: inline-block;
+	padding: 5px 25px;
+	border-radius: 10px;
+	background-color: #ffce7a;
+	font-size: 2vw;
+	text-decoration: none;
+}
+.escribe_trabaja_nosotros{
+	text-decoration: underline;
+	font-size: 2.5vw;
+}
+.banner_trabaja_nosotros{
+	grid-area: banner_trabaja_nosotros;
+}
+.banner_trabaja_nosotros img{
+	width: 80%;
+	height: auto;
+}
+.form_trabaja_nosotros{
+	margin: 0% 20% 0% 10%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(7, auto);
+	grid-template-areas: 
+	"texto_trabaja_nosotros texto_trabaja_nosotros"
+	"texto_trabaja_nosotros texto_trabaja_nosotros"
+	"texto_trabaja_nosotros texto_trabaja_nosotros"
+	"textbox_nombre textbox_apellido"
+	"textbox_correo textbox_correo"
+	"textbox_cv textbox_cv"
+	"btn_formulario_trabaja_nosotros btn_formulario_trabaja_nosotros";
+	grid-area: form_trabaja_nosotros;
+}
+.texto_trabaja_nosotros{
+	margin: 10% 0 5% 0;
+	grid-area: texto_trabaja_nosotros;
+}
+.escribe_trabaja_nosotros{
+	margin-bottom: 5%;
+}
+.texto1_trabaja_nosotros, .texto2_trabaja_nosotros{
+	justify-content: left;
+	text-align: justify;
+	font-size: 1.5vw;
+	margin-bottom: 5%;
+}
+.texto3_trabaja_nosotros{
+	margin-top: 25%;
+	margin-bottom: 0%;
+}
+.texto3_trabaja_nosotros, .texto4_trabaja_nosotros{
+	justify-content: left;
+	text-align: justify;
+	font-size: 1vw;
+}
+.textbox_nombre{
+	grid-area: textbox_nombre;
+	margin-bottom: 10%;
+}
+.textbox_apellido{
+	grid-area: textbox_apellido;
+	margin-bottom: 10%;
+}
+
+.textbox_correo{
+	grid-area: textbox_correo;
+	margin-bottom: 10%;
+}
+.textbox_cv{
+	grid-area: textbox_cv;
+	margin-bottom: 10%;
+}
+.nombre, .apellido, .correo, .cv{
+	display: inline-block;
+	background-color: #ffce7a;
+	letter-spacing: 2px;
+	border-radius: 10px;
+	font-size: 1vw;
+	padding: 5px 15px;
+}
+.blanc {
+	grid-area: blanc_formulario;
+}
+input#nombre, input#apellido {
+	width: 80%;
+	font-size: 1vw;
+	margin-top: 3%;
+}
+input#correo, input#cv {
+	font-size: 1vw;
+	width: 90%;
+	margin-top: 3%;
+}
+.max_2mb{
+	font-size: 0.7vw;
+}
+.btn_formulario_trabaja_nosotros{
+	text-align: center;
+	margin: 5% 30% 10% 30%;
+	background-color: black;
+	color: white;
+	padding: 5px 15px;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 2vw;	
+	grid-area: btn_formulario_trabaja_nosotros;
+}
+
+.footer {
+	padding: 50px;	
+	background-color: black;
+	grid-area: footer;
+}
+.footer ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style-type: none;
+}
+.footer ul li{
+	cursor: pointer;
+	flex: auto;
+	text-align: center;
+}
+.escribenos, .preg_frequ, .trabaja_con_nos, .eventos {
+	color: #faf4e4;
+	text-decoration: none;
+	border-radius: 5px;
+	border-color: #faf4e4;
+	border-width: 0.2px;
+	border-style: solid;
+	padding: 10px;
+	font-size: 1vw;
+}
+
+
+@media screen and (max-width: 768px) {
+
+.grid {
+	width: 100%;
+	display: grid;
+	grid-column-gap: 1%;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(6, auto);
+	grid-template-areas:
+		"header_menu header_menu header_menu header_menu"
+		"banner_trabaja_nosotros titulo_trabaja_nosotros titulo_trabaja_nosotros titulo_trabaja_nosotros"
+		"banner_trabaja_nosotros form_trabaja_nosotros form_trabaja_nosotros form_trabaja_nosotros"
+		"banner_trabaja_nosotros form_trabaja_nosotros form_trabaja_nosotros form_trabaja_nosotros"
+		"banner_trabaja_nosotros btn_formulario_trabaja_nosotros btn_formulario_trabaja_nosotros btn_formulario_trabaja_nosotros"
+		"footer footer footer footer"; 	
+	}
+.menu {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-gap: 10px;
+  text-align: center; 
+  align-items: center;
+  grid-template-areas: 
+      "header_logo header_logo header_logo three_lines";
+} 
+.three_lines{
+  display: block;
+}
+.menu_links {
+  margin-left: 20%;
+}
+.menu_links {
+  position: absolute;
+  background-color: black;
+  right: 0px;
+  padding: 5px;
+  margin-top: 80px;
+  margin-right: 15vw; 
+  height: 40vw;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.menu_links li{
+  margin-bottom: 5vw;
+}
+.menu_links li:hover {
+  background-color: grey;
+}
+.servicios, .nosotros, .sedes, .blog, .iniciar_sesion{
+  text-decoration: none;
+  color: white;
+  font-size: 3vw;
+}
+.footer ul{
+	margin: 0;
+	display: block;
+	list-style-type: none;
+}
+.footer ul li{
+	cursor: pointer;
+	padding: 20px;
+	flex: auto;
+	text-align: center;
+}
+.escribenos, .preg_frequ, .trabaja_con_nos, .eventos {
+	color: #faf4e4;
+	text-decoration: none;
+	border-radius: 5px;
+	border-color: #faf4e4;
+	border-width: 0.2px;
+	border-style: solid;
+	padding: 10px 3vw;
+}
+}
+

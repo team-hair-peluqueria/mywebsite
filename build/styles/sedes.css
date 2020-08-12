@@ -1,0 +1,316 @@
+*{
+	margin: 0
+}
+body {
+	background-color: #faf4e4;
+	font-family: montserrat;
+}
+.grid {
+	width: 100%;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, auto);
+	text-align: center;	
+	align-items: center;
+	grid-template-areas:
+		"header_menu header_menu header_menu header_menu"
+		"banner banner banner banner"
+		"info_sede fotos fotos select_sede"
+		"info_sede mapa redes blanc"
+		"footer footer footer footer";
+}
+.menu {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-gap: 10px;
+  text-align: center; 
+  align-items: center;
+  grid-template-areas: 
+      "header_logo menu_links menu_links menu_links";
+} 
+.header_logo {
+  align-items: center;
+  grid-area: header_logo;
+}
+.header_logo img {
+  width: 300px;
+  height: 80px;
+}
+.logo{
+	cursor: pointer;
+}
+.menu_links {
+  display: flex;
+  list-style-type: none;
+  grid-area: menu_links;
+}
+.menu_links li{
+  cursor: pointer;
+  flex: auto;
+  color: black;
+  text-align: center;
+}
+.menu_links li:hover {
+  border-radius: 5px;
+  border-color: black; 
+  border-style: solid;
+  border-width: 0.6px;
+}
+/* ====> three_lines, es el ícono para el menú responsive <===== */
+.three_lines{ 
+  display: none;
+  cursor: pointer;
+}
+.three_lines div{
+  width: 25px;
+  height: 3px;
+  margin: 4px;
+  background-color: black;
+}
+.servicios, .nosotros, .sedes, .blog, .iniciar_sesion{
+  text-decoration: none;
+  color: black;
+  font-size: 2vw;
+}
+.header_menu {
+	grid-area: header_menu;
+}
+.banner {
+	grid-area: banner;
+	margin-bottom: 5vw;
+}
+.banner img {
+	width: 100%;
+	height: auto;
+}
+.select_sede {
+	grid-area: select_sede;
+}
+.select_sede ul {
+	list-style: none;
+}
+.select_sede ul li{
+	background-color: #faf4e4;
+	color: black;
+}
+.select_sede > ul {
+	list-style: none;
+}
+.select_sede > ul > li {
+	margin: 0;
+	cursor: pointer;
+	letter-spacing: 1px;
+	line-height: 40px;
+	background-color: black;
+	color: #faf4e4;
+	border-radius: 20px;
+}
+.th_suba, .th_salitre, .th_mazuren, .th_colina, .th_country, .th_gran_estacion {
+	font-size: 1.2vw;
+}
+.dropdown {
+	position: relative;
+	padding: 0;
+	width: 100%;
+}
+.dropdown li {
+	display: none;
+}
+.dropdown li:hover {
+	background: black;
+	color: #faf4e4; 
+}
+.select_sede li:hover > .dropdown li{
+	display: block; 
+}
+.fotos {
+	grid-area: fotos;
+	margin-bottom: 3vw;
+}
+.fotos img {
+	display: block;
+	margin-left: 5%;
+	width: 95%;
+	height: auto;
+}
+.info_sede {
+	grid-area: info_sede;
+}
+.info_sede .img_info_sede{
+	width: 65%;
+	height: auto;
+}
+.mapa {
+	margin-left: 5%;
+	grid-area: mapa;
+}
+.redes {
+	grid-area: redes;
+}
+.instagram{
+	margin-right: 10%;
+	display: grid;
+ 	grid-template-columns: repeat(4, 1fr);
+ 	grid-template-areas:
+ 	"connect_instagram instagram_account instagram_account instagram_account";
+}
+.connect_instagram{
+	grid-area: connect_instagram;
+}
+.instagram_account{
+	grid-area:  instagram_account;
+}
+.ig_acc{
+	font-weight: bold;
+}
+.facebook{
+	margin-right: 10%;
+	display: grid;
+ 	grid-template-columns: repeat(4, 1fr);
+ 	grid-template-areas:
+ 	"connect_facebook facebook_account facebook_account facebook_account";
+}
+.connect_facebook{
+	grid-area: connect_facebook;
+}
+.facebook_account{
+	grid-area:  facebook_account;
+}
+.whatsapp{
+	margin-right: 10%;
+	display: grid;
+ 	grid-template-columns: repeat(4, 1fr);
+ 	grid-template-areas:
+ 	"connect_whatsapp whatsapp_account whatsapp_account whatsapp_account";
+}
+.connect_whatsapp{
+	grid-area: connect_whatsapp;
+}
+.whatsapp_account{
+	grid-area:  whatsapp_account;
+}
+.whatsapp_number, .ig_acc, .fb_acc, .agenda_cita, .btn_select_sede {
+	font-size: 1.2vw;
+}
+.connect_enjoy{
+	
+}
+.agenda_cita{
+	background-color: black;
+	padding:5px 20px;
+	color: #faf4e4;
+	border-radius: 5px;
+	text-decoration: none;
+}
+.footer {
+	padding: 50px;	
+	background-color: black;
+	grid-area: footer;
+}
+.footer ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style-type: none;
+}
+.footer ul li{
+	cursor: pointer;
+	flex: auto;
+	text-align: center;
+}
+.escribenos, .preg_frequ, .trabaja_con_nos, .eventos {
+	color: #faf4e4;
+	text-decoration: none;
+	border-radius: 5px;
+	border-color: #faf4e4;
+	border-width: 0.2px;
+	border-style: solid;
+	padding: 10px;
+	font-size: 1vw;
+}
+
+@media screen and (max-width: 768px) {
+
+.grid {
+	grid-template-areas:
+		"header_menu header_menu header_menu header_menu"
+		"banner banner banner banner"
+		"select_sede select_sede select_sede select_sede"
+		"fotos fotos fotos fotos"
+		"info_sede info_sede info_sede info_sede"
+		"mapa mapa mapa mapa"
+		"redes redes redes blanc"
+		"footer footer footer footer"; 
+	}
+
+.menu {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-gap: 10px;
+  text-align: center; 
+  align-items: center;
+  grid-template-areas: 
+      "header_logo header_logo header_logo three_lines";
+} 
+.three_lines{
+  display: block;
+}
+.menu_links {
+  margin-left: 20%;
+}
+.menu_links {
+  position: absolute;
+  background-color: black;
+  right: 0px;
+  padding: 5px;
+  margin-top: 80px;
+  margin-right: 15vw; 
+  height: 40vw;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.menu_links li{
+  margin-bottom: 5vw;
+}
+.menu_links li:hover {
+  background-color: grey;
+}
+.servicios, .nosotros, .sedes, .blog, .iniciar_sesion{
+  text-decoration: none;
+  color: white;
+  font-size: 3vw;
+}
+.fotos img {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
+.whatsapp_number, .ig_acc, .fb_acc, .agenda_cita, .btn_select_sede {
+	font-size: 4vw;
+}
+.footer ul{
+	margin: 0;
+	display: block;
+	list-style-type: none;
+}
+.footer ul li{
+	cursor: pointer;
+	padding: 20px;
+	flex: auto;
+	text-align: center;
+}
+.escribenos, .preg_frequ, .trabaja_con_nos, .eventos {
+	color: #faf4e4;
+	text-decoration: none;
+	border-radius: 5px;
+	border-color: #faf4e4;
+	border-width: 0.2px;
+	border-style: solid;
+	padding: 10px 3vw;
+}
+}
+

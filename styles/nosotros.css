@@ -1,0 +1,228 @@
+*{
+	margin: 0
+}
+
+body {
+	background-color: #faf4e4;
+	font-family: montserrat;
+}
+.grid {
+	width: 100%;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(4, auto);
+	grid-template-rows: repeat(4, auto);
+	text-align: center;	
+	align-items: center;
+	grid-template-areas:
+		"header_menu header_menu header_menu header_menu"
+		"banner banner banner banner"
+		"blanc_left texto_nosotros foto_nosotros blanc_right"
+		"footer footer footer footer";
+}
+.menu {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-gap: 10px;
+  text-align: center; 
+  align-items: center;
+  grid-template-areas: 
+      "header_logo menu_links menu_links menu_links";
+} 
+.header_logo {
+  align-items: center;
+  grid-area: header_logo;
+}
+.header_logo img {
+  width: 300px;
+  height: 80px;
+}
+.logo{
+	cursor: pointer;
+}
+.menu_links {
+  display: flex;
+  list-style-type: none;
+  grid-area: menu_links;
+}
+.menu_links li{
+  cursor: pointer;
+  flex: auto;
+  color: black;
+  text-align: center;
+}
+.menu_links li:hover {
+  border-radius: 5px;
+  border-color: black; 
+  border-style: solid;
+  border-width: 0.6px;
+}
+/* ====> three_lines, es el ícono para el menú responsive <===== */
+.three_lines{ 
+  display: none;
+  cursor: pointer;
+}
+.three_lines div{
+  width: 25px;
+  height: 3px;
+  margin: 4px;
+  background-color: black;
+}
+.servicios, .nosotros, .sedes, .blog, .iniciar_sesion{
+  text-decoration: none;
+  color: black;
+  font-size: 2vw;
+}
+.header_menu {
+	grid-area: header_menu;
+}
+.banner {
+	grid-area: banner;
+}
+.banner img {
+	width: 100%;
+	height: auto;
+}
+.blanc_left{
+	width: 20vw;
+	grid-area: blanc_left;
+}
+ .blanc_right{
+	width: 20vw;
+	grid-area: blanc_right;
+}
+.texto_nosotros{
+	grid-area: texto_nosotros;
+}
+.foto_nosotros{
+	grid-area: foto_nosotros;
+}
+.texto_nosotros h1{
+	font-size: 2.5vw;
+}
+.texto_nosotros p{
+	font-size: 1.5vw;
+	margin-top: 3vw;
+	text-align: justify;
+}
+.foto_nosotros img {
+	display: block;
+	margin-top: 15%;
+	margin-left: 10%; 
+	margin-bottom: 15%;
+	width: 120%;
+	height: auto;
+}
+.footer {
+	padding: 50px;	
+	background-color: black;
+	grid-area: footer;
+}
+.footer ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style-type: none;
+}
+.footer ul li{
+	cursor: pointer;
+	flex: auto;
+	text-align: center;
+}
+.escribenos, .preg_frequ, .trabaja_con_nos, .eventos {
+	color: #faf4e4;
+	text-decoration: none;
+	border-radius: 5px;
+	border-color: #faf4e4;
+	border-width: 0.2px;
+	border-style: solid;
+	padding: 10px;
+	font-size: 1vw;
+}
+
+@media screen and (max-width: 768px) {
+
+.grid {
+	width: 100%;
+	display: grid;
+	grid-gap: 2%;
+	grid-template-columns: repeat(4, auto);
+	grid-template-rows: repeat(6, auto);
+	text-align: center;	
+	align-items: center;
+	grid-template-areas:
+		"header_menu header_menu header_menu header_menu"
+		"banner banner banner banner"
+		"blanc_left blanc_left blanc_left blanc_left" 
+		"foto_nosotros texto_nosotros texto_nosotros texto_nosotros"
+		"blanc_right blanc_right blanc_right blanc_right"
+		"footer footer footer footer"; 
+}
+
+.menu {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-gap: 10px;
+  text-align: center; 
+  align-items: center;
+  grid-template-areas: 
+      "header_logo header_logo header_logo three_lines";
+} 
+.three_lines{
+  display: block;
+}
+.menu_links {
+  margin-left: 20%;
+}
+.menu_links {
+  position: absolute;
+  background-color: black;
+  right: 0px;
+  padding: 5px;
+  margin-top: 80px;
+  margin-right: 15vw; 
+  height: 40vw;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.menu_links li{
+  margin-bottom: 5vw;
+}
+.menu_links li:hover {
+  background-color: grey;
+}
+.servicios, .nosotros, .sedes, .blog, .iniciar_sesion{
+  text-decoration: none;
+  color: white;
+  font-size: 3vw;
+}
+.blanc_left{
+	height: 5vw;
+}
+.blanc_right{
+	height: 5vw;
+}
+.footer ul{
+	margin: 0;
+	display: block;
+	list-style-type: none;
+}
+.footer ul li{
+	cursor: pointer;
+	padding: 20px;
+	flex: auto;
+	text-align: center;
+}
+.escribenos, .preg_frequ, .trabaja_con_nos, .eventos {
+	color: #faf4e4;
+	text-decoration: none;
+	border-radius: 5px;
+	border-color: #faf4e4;
+	border-width: 0.2px;
+	border-style: solid;
+	padding: 10px 3vw;
+}
+}
+

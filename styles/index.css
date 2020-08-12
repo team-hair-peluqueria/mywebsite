@@ -1,0 +1,302 @@
+*{
+	margin: 0
+}
+
+body {
+	background-color: #faf4e4;
+	font-family: montserrat;
+}
+.grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(6, auto);
+	text-align: center;	
+	align-items: center;
+	grid-template-areas:
+		"header_menu header_menu header_menu header_menu"
+		"banner banner banner banner"
+		"tendencias tendencias tendencias tendencias"
+		"sobre_nosotros sobre_nosotros sobre_nosotros sobre_nosotros"
+		"social_media social_media social_media social_media"
+		"footer footer footer footer";
+}
+.menu {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-gap: 10px;
+  text-align: center; 
+  align-items: center;
+  grid-template-areas: 
+      "header_logo menu_links menu_links menu_links";
+} 
+.header_logo {
+  align-items: center;
+  grid-area: header_logo;
+}
+.header_logo img {
+  width: 300px;
+  height: 80px;
+}
+.logo{
+	cursor: pointer;
+}
+.menu_links {
+  display: flex;
+  list-style-type: none;
+  grid-area: menu_links;
+}
+.menu_links li{
+  cursor: pointer;
+  flex: auto;
+  color: black;
+  text-align: center;
+}
+.menu_links li:hover {
+  border-radius: 5px;
+  border-color: black; 
+  border-style: solid;
+  border-width: 0.6px;
+}
+/* ====> three_lines, es el ícono para el menú responsive <===== */
+.three_lines{ 
+  display: none;
+  cursor: pointer;
+}
+.three_lines div{
+  width: 25px;
+  height: 3px;
+  margin: 4px;
+  background-color: black;
+}
+/* ====> Final three_lines <===== */
+
+.servicios, .nosotros, .sedes, .blog, .iniciar_sesion{
+  text-decoration: none;
+  color: black;
+  font-size: 2vw;
+}
+.header_menu {
+	grid-area: header_menu;
+}
+.banner {
+	grid-area: banner;
+	margin-bottom: 10vw;
+}
+.banner img {
+	border-color: grey;
+	border-style: solid;
+	border-width: 0.5px;
+	width: 100%;
+	height: auto;
+}
+.tendencias{
+	margin: 0 10% 0 10%;
+	grid-area: tendencias;
+}
+.title_tendencias{
+	font-size: 1.5vw;
+	margin-bottom: 3vw;
+}
+.boxes_tendencias{
+	display: flex;
+	justify-content: space-around;
+	display: flex;	
+}
+.box{
+	width: 25vw;
+	height: 25vw;
+	margin-bottom: 5%;
+}
+.box img{
+	width: 25vw;
+	height: 18vw;
+	margin: 3vw 0 0 0;
+}
+.box p{
+	border-radius: 5px;
+	font-size: 1.5vw;
+	text-decoration: none;
+	color: black;
+	margin-top: 3%;
+	font-size: 2vw;
+}
+.box a{
+	text-decoration: none;
+}
+.box2{
+	width: 25vw;
+	height: auto;
+}
+.sobre_nosotros{
+	display: grid;
+	margin: 0 10% 0 10%;
+	border-color: black;
+	border-style: solid;
+	grid-area: sobre_nosotros;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas: 
+	"img_nosotros img_nosotros img_nosotros texto_nosotros texto_nosotros"
+	"agenda agenda agenda agenda agenda";
+}
+.img_nosotros{
+	grid-area: img_nosotros;
+}
+.img_nosotros img{
+	margin-right: 5vw;
+	width: 50vw;
+	height: auto;
+}
+.texto_nosotros{
+	grid-area: texto_nosotros;
+}
+.texto_nosotros p{
+	margin-left: 5vw;
+	text-align: justify;
+	font-size: 1.5vw;	
+}
+.agenda{
+	margin: 10vw 15vw 10vw 15vw;
+	border-color: black;
+	border-radius: 2vw;
+	border-width: 0.1vw;
+	vertical-align: center;
+	border-style: solid;
+	padding: 2vw;
+	grid-area: agenda;
+}
+.texto_agenda{
+	display: inline-block;
+	width: 25vw;
+	height: auto;
+}
+.agenda p{
+	font-size: 2vw;
+}
+.agenda a{
+	margin-left: 5vw;
+	background-color: #ffce7a;
+	text-decoration: none;
+	color: black;
+	padding: 1vw;
+	border-radius: 5vw;
+	font-size: 2.5vw;
+}
+.social_media{
+	border-color: black;
+	border-style: solid;
+	grid-area: social_media;
+}
+.footer {
+	padding: 50px;	
+	background-color: black;
+	grid-area: footer;
+}
+.footer ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style-type: none;
+}
+.footer ul li{
+	cursor: pointer;
+	flex: auto;
+	text-align: center;
+}
+.escribenos, .preg_frequ, .trabaja_con_nos, .eventos {
+	color: #faf4e4;
+	text-decoration: none;
+	border-radius: 5px;
+	border-color: #faf4e4;
+	border-width: 0.2px;
+	border-style: solid;
+	padding: 10px;
+	font-size: 1vw;
+}
+
+@media screen and (max-width: 768px) {
+
+.grid {
+	width: 100%;
+	display: grid;
+	grid-gap: 2%;
+	grid-template-columns: repeat(4, auto);
+	grid-template-rows: repeat(5, auto);
+	text-align: center;	
+	align-items: center;
+	grid-template-areas:
+		"header_menu header_menu header_menu header_menu"
+		"banner banner banner banner"
+		"tendencias tendencias tendencias tendencias"
+		"sobre_nosotros sobre_nosotros sobre_nosotros sobre_nosotros"
+		"social_media social_media social_media social_media"
+		"footer footer footer footer"; 
+}
+
+
+
+
+
+.menu {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-gap: 10px;
+  text-align: center; 
+  align-items: center;
+  grid-template-areas: 
+      "header_logo header_logo header_logo three_lines";
+} 
+.three_lines{
+  display: block;
+}
+.menu_links {
+  margin-left: 20%;
+}
+.menu_links {
+  position: absolute;
+  background-color: black;
+  right: 0px;
+  padding: 5px;
+  margin-top: 80px;
+  margin-right: 15vw; 
+  height: 40vw;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.menu_links li{
+  margin-bottom: 5vw;
+}
+.menu_links li:hover {
+  background-color: grey;
+}
+.servicios, .nosotros, .sedes, .blog, .iniciar_sesion{
+  text-decoration: none;
+  color: white;
+  font-size: 3vw;
+}
+
+
+.footer ul{
+	margin: 0;
+	display: block;
+	list-style-type: none;
+}
+.footer ul li{
+	cursor: pointer;
+	padding: 20px;
+	flex: auto;
+	text-align: center;
+}
+.escribenos, .preg_frequ, .trabaja_con_nos, .eventos {
+	color: #faf4e4;
+	text-decoration: none;
+	border-radius: 5px;
+	border-color: #faf4e4;
+	border-width: 0.2px;
+	border-style: solid;
+	padding: 10px 3vw;
+}
+}
+

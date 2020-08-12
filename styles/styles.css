@@ -1,0 +1,107 @@
+	body {
+		margin: 0px;
+		background-color: #00000;
+	}
+	.header {
+		background-color: #1C1C1C;
+		width: 100%;
+		height: 80px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.header__space1-img {
+		width:200px;
+	} 
+	.header__menu {
+		margin-right: 30px;
+		color: white;
+	}
+	.header__menu ul {
+		display: none;
+		list-style: none;
+		padding: 0px;
+		position: absolute;
+		width: 100px;
+		text-align: right;
+		margin: 0px 0px 0px -14px;
+	}
+	.header__menu:hover ul, ul:hover {
+		display: block;
+	}
+	.header__menu li {
+		margin: 10px 15px;
+	}
+	.header__menu li a {
+		color: white;
+		text-decoration: none;
+	}
+	.header__menu li a:hover {
+		text-decoration: underline;
+	}
+	.header__menu--profile {
+		display: flex;
+		margin-right: 60px;
+		width: 40px;
+	}
+	.container img{
+		width: 40px;
+		height: 50px
+	}
+	.carousel {
+		width: 100%;
+		overflow: scroll;
+		padding: 30px;
+		padding-right: 30px
+		position: relative;
+		}
+	.carousel__container {
+		white-space: nowrap;
+		margin-right: 70px 0px;
+		padding-bottom: 10px; 
+	}
+	.carousel-item {
+		width: 80%;
+		height: 350px;
+		border-radius: 20px;
+		background-color: #1C1C1C;
+		overflow: hidden;
+		margin-right: 10px;
+		display: inline-block;
+		cursor: pointer;
+		transition: 800ms;
+		transform-origin: center left; 
+		position: relative;
+	}
+	.carousel-item:hover ~ .carousel-item {
+		transform: translate3d(100px, 0, 0);
+	}
+	.carousel__container:hover .carousel-item {
+		opacity: 0.3;
+	}
+	.carousel__container:hover .carousel-item:hover {
+		transform: scale(1.2);
+		opacity: 1;
+	}
+	.carousel-item__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.carousel-item__details{
+		back: linear-gradient (to top,  rgba (0,0,0, 0.9)0%, a (0,0,0,0)100%);
+		font-size: 10px;
+		opacity: 0;
+		transition: 500ms opacity;
+		padding: 10px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		}
+@media screen and (max-width: 800px) {
+	body {
+		background-color: orange;
+	}
+}

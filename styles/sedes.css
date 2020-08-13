@@ -150,56 +150,65 @@ body {
 	grid-area: redes;
 }
 .instagram{
-	margin-right: 10%;
 	display: grid;
  	grid-template-columns: repeat(4, 1fr);
+ 	margin-bottom: 1vw;
+ 	grid-gap: 0.5vw;
  	grid-template-areas:
  	"connect_instagram instagram_account instagram_account instagram_account";
 }
 .connect_instagram{
+	text-align: right;
 	grid-area: connect_instagram;
 }
 .instagram_account{
+	text-align: left;
 	grid-area:  instagram_account;
 }
 .ig_acc{
 	font-weight: bold;
 }
 .facebook{
-	margin-right: 10%;
 	display: grid;
+	margin-bottom: 1vw;
  	grid-template-columns: repeat(4, 1fr);
+ 	grid-gap: 0.5vw;
  	grid-template-areas:
  	"connect_facebook facebook_account facebook_account facebook_account";
 }
 .connect_facebook{
+	text-align: right;
 	grid-area: connect_facebook;
 }
 .facebook_account{
+	text-align: left;
 	grid-area:  facebook_account;
 }
 .whatsapp{
-	margin-right: 10%;
 	display: grid;
  	grid-template-columns: repeat(4, 1fr);
+ 	grid-gap: 0.5vw;
  	grid-template-areas:
  	"connect_whatsapp whatsapp_account whatsapp_account whatsapp_account";
 }
 .connect_whatsapp{
+	text-align: right;
 	grid-area: connect_whatsapp;
 }
 .whatsapp_account{
+	text-align: left;
 	grid-area:  whatsapp_account;
 }
 .whatsapp_number, .ig_acc, .fb_acc, .agenda_cita, .btn_select_sede {
 	font-size: 1.2vw;
 }
 .connect_enjoy{
-	
+	margin-top: 2vw;
 }
 .agenda_cita{
 	background-color: black;
-	padding:5px 20px;
+	font-size: 1.7vw;
+	padding: 10px 20px;
 	color: #faf4e4;
 	border-radius: 5px;
 	text-decoration: none;
@@ -231,9 +240,39 @@ body {
 	font-size: 1vw;
 }
 
+@media screen and (max-width: 1200px) {
+
+.grid {
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(7, auto);
+	text-align: center;	
+	align-items: center;
+	grid-template-areas:
+		"header_menu header_menu header_menu header_menu"
+		"banner banner banner banner"
+		"select_sede select_sede select_sede select_sede"
+		"fotos fotos fotos fotos"
+		"info_sede info_sede info_sede blanc"
+		"mapa mapa redes redes"
+		"footer footer footer footer"; 
+	}
+.whatsapp_number, .ig_acc, .fb_acc, .agenda_cita, .btn_select_sede {
+	font-size: 2vw;
+}
+.connect_enjoy {
+	margin-top: 5vw;
+}
+#sede {
+	font-size: 3vw;
+}
+
 @media screen and (max-width: 768px) {
 
 .grid {
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(9, auto);
+	text-align: center;	
+	align-items: center;
 	grid-template-areas:
 		"header_menu header_menu header_menu header_menu"
 		"banner banner banner banner"
@@ -241,7 +280,8 @@ body {
 		"fotos fotos fotos fotos"
 		"info_sede info_sede info_sede info_sede"
 		"mapa mapa mapa mapa"
-		"redes redes redes blanc"
+		"redes redes redes redes"
+		"blanc blanc blanc blanc"
 		"footer footer footer footer"; 
 	}
 
@@ -282,6 +322,9 @@ body {
   text-decoration: none;
   color: white;
   font-size: 3vw;
+}
+.blanc{
+	height: 10vw;
 }
 .fotos img {
 	display: block;

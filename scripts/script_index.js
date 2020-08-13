@@ -6,11 +6,11 @@ function desplegarMenu (){
 
 function displayNextImage() {
    x = (x === images.length - 1) ? 0 : x + 1;
-  document.getElementById("banner_sedes").src = images[x];
+  document.getElementById("banner_home").src = images[x];
 }
 
 function startTimer() {
-  setInterval(displayNextImage, 2000);
+  setInterval(displayNextImage, 4000);
 }
   var images = [], x = -1;
     images[0] = "./pics/home/banner1.jpg";

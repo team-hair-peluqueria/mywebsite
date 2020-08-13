@@ -99,7 +99,26 @@ body {
 	width: 80%;
 	height: auto;
 }
+.listado_preguntas{
+	margin-top: 5vw;
+	margin-right: 5vw;
+	grid-area: listado_preguntas;
 
+}
+.listado_preguntas h2{
+	font-size: 1.7vw;
+	margin-bottom: 1vw;
+}
+.listado_preguntas p{
+	text-align: justify;
+	font-size: 1.2vw;
+	margin-bottom: 1vw;
+}
+.listado_preguntas a{
+	text-decoration: none;
+	font-size: 1.2vw;
+	margin-bottom: 1vw;
+}
 .footer {
 	padding: 50px;	
 	background-color: black;

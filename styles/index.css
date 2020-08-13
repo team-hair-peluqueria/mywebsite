@@ -1,10 +1,11 @@
-*{
-	margin: 0
+@font-face{
+	src: url(./fonts/MontserratAlternates-ExtraLightItalic.otf);
+	font-family: mont;
 }
 
 body {
 	background-color: #faf4e4;
-	font-family: montserrat;
+	font-family: mont;
 }
 .grid {
 	width: 100%;
@@ -84,8 +85,6 @@ body {
 	margin-bottom: 10vw;
 }
 .banner img {
-	border-color: grey;
-	border-style: solid;
 	border-width: 0.5px;
 	width: 100%;
 	height: auto;
@@ -131,8 +130,7 @@ body {
 .sobre_nosotros{
 	display: grid;
 	margin: 0 10% 0 10%;
-	border-color: black;
-	border-style: solid;
+	align-items: center;
 	grid-area: sobre_nosotros;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(2, auto);
@@ -149,9 +147,11 @@ body {
 	height: auto;
 }
 .texto_nosotros{
+	vertical-align: center;
 	grid-area: texto_nosotros;
 }
 .texto_nosotros p{
+	line-height: 140%;
 	margin-left: 5vw;
 	text-align: justify;
 	font-size: 1.5vw;	

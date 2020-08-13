@@ -122,14 +122,11 @@ body {
 	display: grid;
 	grid-column-gap: 1%;
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(6, auto);
+	grid-template-rows: repeat(3, auto);
 	grid-template-areas:
-		"header_menu header_menu header_menu header_menu"
-		"banner_escribenos titulo_escribenos titulo_escribenos titulo_escribenos"
-		"banner_escribenos form_escribenos form_escribenos form_escribenos"
-		"banner_escribenos form_escribenos form_escribenos form_escribenos"
-		"banner_escribenos btn_formulario_escribenos btn_formulario_escribenos btn_formulario_escribenos"
-		"footer footer footer footer"; 	
+		"header_menu header_menu header_menu"
+		"titulo_blog titulo_blog titulo_blog"
+		"footer footer footer";
 	}
 .menu {
   grid-template-columns: repeat(4, 1fr);

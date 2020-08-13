@@ -1,11 +1,6 @@
-@font-face{
-	src: url(./fonts/MontserratAlternates-ExtraLightItalic.otf);
-	font-family: mont;
-}
-
 body {
 	background-color: #faf4e4;
-	font-family: mont;
+	font-family: montserrat;
 }
 .grid {
 	width: 100%;

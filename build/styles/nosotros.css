@@ -8,9 +8,7 @@ body {
 }
 .grid {
 	width: 100%;
-	margin: 20px auto;
 	display: grid;
-	grid-gap: 10px;
 	grid-template-columns: repeat(4, auto);
 	grid-template-rows: repeat(4, auto);
 	text-align: center;	
@@ -18,7 +16,8 @@ body {
 	grid-template-areas:
 		"header_menu header_menu header_menu header_menu"
 		"banner banner banner banner"
-		"blanc_left texto_nosotros foto_nosotros blanc_right"
+		"blanc_left texto_nosotros foto_nosotros foto_nosotros"
+		"blanc_right blanc_right blanc_right blanc_right"
 		"footer footer footer footer";
 }
 .menu {
@@ -78,6 +77,7 @@ body {
 	grid-area: header_menu;
 }
 .banner {
+	margin-bottom: 10vw;
 	grid-area: banner;
 }
 .banner img {
@@ -106,12 +106,13 @@ body {
 	margin-top: 3vw;
 	text-align: justify;
 }
+.foto_nosotros{
+	margin-left: 2vw;
+}
 .foto_nosotros img {
 	display: block;
-	margin-top: 15%;
-	margin-left: 10%; 
 	margin-bottom: 15%;
-	width: 120%;
+	width: 80%;
 	height: auto;
 }
 .footer {

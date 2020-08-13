@@ -77,13 +77,9 @@ body {
   font-size: 2vw;
 }
 .header_menu {
-	border-color: black;
-	border-style: solid;
 	grid-area: header_menu;
 }
 .banner {
-	border-color: black;
-	border-style: solid;
 	grid-area: banner;
 	margin-bottom: 10vw;
 }
@@ -165,15 +161,14 @@ body {
 .grid {
 	width: 100%;
 	display: grid;
-	grid-gap: 2%;
 	grid-template-columns: repeat(4, auto);
 	grid-template-rows: repeat(5, auto);
 	text-align: center;	
 	align-items: center;
 	grid-template-areas:
 		"header_menu header_menu header_menu header_menu"
-		"titulo titulo titulo titulo "
 		"banner banner banner banner"
+		"titulo titulo titulo titulo "
 		"th_servicios th_servicios th_servicios th_servicios"
 		"footer footer footer footer"; 
 }

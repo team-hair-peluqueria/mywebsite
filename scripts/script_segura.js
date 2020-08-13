@@ -6,18 +6,6 @@ function chageInfoTHSuba (){
 	agenda_cita.href		="https://my.enjoycol.com/salon/16";
 	whatsapp_number.textContent = "310 7831725"; 
 }		
-function displayNextImage() {
-    x = (x === images.length - 1) ? 0 : x + 1;
-  	document.getElementById("th_suba").src = images[x];
-  	}
-  	function startTimer() {
-    setInterval(displayNextImage, 1000);
- 	}
-  	var images = [], x = -1;
-	    images[0] = "./pics/teamhair_avenida_suba/team_hair_avenida_suba_1.jpg";
-	    images[1] = "./pics/teamhair_avenida_suba/team_hair_avenida_suba_2.jpg";
-	    images[2] = "./pics/teamhair_avenida_suba/team_hair_avenida_suba_3.jpg";
-
 
 th_salitre.addEventListener("click", chageInfoTHSalitre, true);
 function chageInfoTHSalitre (){

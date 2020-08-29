@@ -256,6 +256,9 @@ body {
 		"mapa mapa redes redes"
 		"footer footer footer footer"; 
 	}
+.th_suba, .th_salitre, .th_mazuren, .th_colina, .th_country, .th_gran_estacion {
+font-size: 2vw;
+}
 .whatsapp_number, .ig_acc, .fb_acc, .agenda_cita, .btn_select_sede {
 	font-size: 2vw;
 }
@@ -284,7 +287,9 @@ body {
 		"blanc blanc blanc blanc"
 		"footer footer footer footer"; 
 	}
-
+.th_suba, .th_salitre, .th_mazuren, .th_colina, .th_country, .th_gran_estacion {
+font-size: 2.5vw;
+}
 .menu {
   grid-template-columns: repeat(4, 1fr);
   display: grid;
